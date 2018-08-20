@@ -5,9 +5,10 @@ let previous = 0;
 
 // $(".crystal").attr('class');
 
-let startGame = function () {
-    
-}
+let resetAndStart = function () {
+
+    $(".crystals").empty();
+
 
 random_result = Math.floor(Math.random() * 70) + 30;
 
@@ -17,6 +18,7 @@ for(var i=0; i<4; i++){
 
     var random = Math.floor(Math.random() * 11) + 1;
     // console.log(random);
+
 
 
     var crystal = $("<div>");
@@ -29,9 +31,16 @@ for(var i=0; i<4; i++){
 
     $(".crystals").append(crystal);
 
+    }
 }
 
-$(".crystal").on('click', function () {
+resetAndStart();
+
+
+
+//Event delegation
+
+$(document).on('click', ".crystal", function () {
 
     
     var num = parseInt($(this).attr('data-random'));
@@ -45,6 +54,11 @@ $(".crystal").on('click', function () {
         lost--;
 
         $(".lost").html(lost);
+
+        previous = 0;
+
+        resetAndStart();
+        
     }
     
 
@@ -52,11 +66,12 @@ $(".crystal").on('click', function () {
         win++;
 
         $(".win").html(win);
+
+        previous = 0;
+        
+        resetAndStart();
     }
         
-       
-
-
     
     
 
