@@ -10,4 +10,22 @@
     border: 1px solid green;
     height: 200px;
     width: 200px;
+    background-image: url(../images/blue.png);
+
+    background-size: contain;
+
+}
+body{
+    background-color: rgb(29, 86, 104);
+    color: wheat;
+    font-size: 18px;
+    background-image: url(../images/stevie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% -100%;
+
+    
+
+    
 }

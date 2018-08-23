@@ -25,6 +25,7 @@ for(var i=0; i<4; i++){
             "class": 'crystal',
             "data-random": random
         });
+        
 
         $(".crystals").append(crystal);
 
