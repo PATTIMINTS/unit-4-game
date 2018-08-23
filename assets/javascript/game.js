@@ -17,8 +17,7 @@ $(".result").html('Random Result: ' + random_result);
 for(var i=0; i<4; i++){
 
     var random = Math.floor(Math.random() * 11) + 1;
-    // console.log(random);
-
+    
 
 
     var crystal = $("<div>");
@@ -27,25 +26,23 @@ for(var i=0; i<4; i++){
             "data-random": random
         });
 
-        crystal.html(random);
-
-    $(".crystals").append(crystal);
+        $(".crystals").append(crystal);
 
     }
-}
 
+    $('.previous').html("Total Score: " + previous);
+}
 resetAndStart();
 
 
-
 //Event delegation
-
 $(document).on('click', ".crystal", function () {
-
-    
+   
     var num = parseInt($(this).attr('data-random'));
 
     previous += num;
+
+    $('.previous').html("Total Score: " + previous);
 
     console.log(previous);
 
@@ -53,7 +50,7 @@ $(document).on('click', ".crystal", function () {
     if (previous > random_result){
         lost--;
 
-        $(".lost").html(lost);
+        $(".lost").html("You Lost: " + lost);
 
         previous = 0;
 
@@ -65,8 +62,8 @@ $(document).on('click', ".crystal", function () {
     else if(previous === random_result){
         win++;
 
-        $(".win").html(win);
-
+        $(".win").html("You Win: " + win);
+        
         previous = 0;
         
         resetAndStart();
