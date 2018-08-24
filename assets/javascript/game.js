@@ -16,11 +16,11 @@ random_result = Math.floor(Math.random() * 70) + 30;
 $(".result").html('Random Result: ' + random_result);
 for(var i=0; i<4; i++){
 
-    var random = Math.floor(Math.random() * 11) + 1;
+    let random = Math.floor(Math.random() * 11) + 1;
     
 
 
-    var crystal = $("<div>");
+    let crystal = $("<div>");
         crystal.attr({
             "class": 'crystal',
             "data-random": random
@@ -39,7 +39,7 @@ resetAndStart();
 //Event delegation
 $(document).on('click', ".crystal", function () {
    
-    var num = parseInt($(this).attr('data-random'));
+    let num = parseInt($(this).attr('data-random'));
 
     previous += num;
 

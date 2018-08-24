@@ -11,21 +11,31 @@
     height: 200px;
     width: 200px;
     background-image: url(../images/blue.png);
-
+    
     background-size: contain;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 
 }
 body{
     background-color: rgb(29, 86, 104);
     color: wheat;
-    font-size: 18px;
-    background-image: url(../images/stevie.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 50% -100%;
-
-    
+    font-size: 18px; 
+    line-height: 5px;   
+    /* background-image: url(../images/stevie.jpg); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-size: 50%; */
+    /* background-position: 50% -100%; */
 
     
 }
+
+.stevie{
+    align-items: center;
+    margin-left: 525px;
+    margin-top: 100px;
+
+}
+    
+    
+    
